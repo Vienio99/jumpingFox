@@ -1,0 +1,55 @@
+body {
+    font-family: 'Padauk', sans-serif;
+    font-size: 17px;
+}
+
+header {
+    font-family: 'JetBrains Mono', monospace;
+    border-bottom: 1px solid rgb(177, 177, 177);
+}
+
+img {
+    width:400px;
+    height: auto;
+}
+
+
+header h1 a {
+    color:teal;
+}
+
+header h1 a:hover {
+    text-decoration: none;
+}
+
+.post-entry {
+    margin-bottom: 2rem;
+}
+
+.post-entry h2 {
+    font-family: 'JetBrains Mono', monospace;
+    margin: 0.5rem 0;
+}
+
+.post-entry h2 a {
+    color:rgb(16, 167, 146);
+}
+
+.post-entry h2 a:hover {
+    text-decoration: none;
+}
+
+.post-entry p {
+    font-size: 20px;
+    margin: 0;
+}
+
+.return a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px;
+    color:rgb(16, 167, 146);
+}
+
+.return a:hover {
+    text-decoration: none;
+}
