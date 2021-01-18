@@ -6,21 +6,33 @@ body {
 header {
     font-family: 'JetBrains Mono', monospace;
     border-bottom: 1px solid rgb(177, 177, 177);
+    display: flex;
 }
+
+header a {
+    color: rgb(202, 102, 9);
+}
+
+header a:hover {
+    text-decoration: none;
+}
+
+.nav-left {
+    margin-right: auto;
+}
+
+.nav-right {
+    display: flex;
+    padding-top: 2rem;
+    font-size: 20px;
+}
+
 
 img {
     width:400px;
     height: auto;
 }
 
-
-header h1 a {
-    color:teal;
-}
-
-header h1 a:hover {
-    text-decoration: none;
-}
 
 .post-entry {
     margin-bottom: 2rem;
@@ -47,9 +59,10 @@ header h1 a:hover {
 .return a {
     font-family: 'JetBrains Mono', monospace;
     font-size: 20px;
-    color:rgb(16, 167, 146);
+    color: rgb(202, 102, 9);
 }
 
 .return a:hover {
     text-decoration: none;
 }
+

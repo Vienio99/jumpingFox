@@ -15,3 +15,8 @@ class BlogDetailView(generic.DetailView):
     model = Post
     template_name = 'post_detail.html'
     context_object_name = 'post'
+
+class BlogCreateView(generic.CreateView):
+    model = Post
+    template_name = 'post_new.html'
+    fields = ['author', 'title', 'body']
