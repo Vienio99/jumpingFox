@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block content %}
+    <img src="{% static 'img/jumping-fox.jpg' %}", alt="Jumping fox">
     {% for post in all_posts %}
     <div class="post-entry">
+        <div class="additional-info">
+            <p>Author: {{ post.author }} Date: {{ post.pub_date|date:"SHORT_DATE_FORMAT" }}</p>
+        </div>
         <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
-        <p>{{ post.body }}</p>
+        <p>{{ post.body|slice:":50" }}...</p>
     </div>
     {% endfor %}
-{% endblock %}
+{% endblock content %}

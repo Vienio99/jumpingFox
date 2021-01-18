@@ -3,6 +3,9 @@
 
 {% block content %}
 <div class="post-entry">
+    <div class="additional-info">
+        <p>Author: {{ post.author }} Date: {{ post.pub_date|date:"SHORT_DATE_FORMAT" }}</p>
+    </div>
     <h2>{{ post.title }}</h2>
     <p>{{ post.body }}</p>
 </div>

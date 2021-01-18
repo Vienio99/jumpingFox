@@ -29,7 +29,7 @@ header a:hover {
 
 
 img {
-    width:400px;
+    width:350px;
     height: auto;
 }
 
@@ -52,8 +52,9 @@ img {
 }
 
 .post-entry p {
-    font-size: 20px;
+    font-size: 24px;
     margin: 0;
+    padding-top: 0px;
 }
 
 .return a {
@@ -66,3 +67,6 @@ img {
     text-decoration: none;
 }
 
+.post-entry .additional-info p {
+    font-size: 15px;
+}
