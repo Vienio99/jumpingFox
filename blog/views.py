@@ -21,3 +21,8 @@ class BlogCreateView(generic.CreateView):
     model = Post
     template_name = 'post_new.html'
     fields = ['author', 'title', 'body']
+
+class BlogUpdateView(generic.UpdateView):
+    model = Post
+    template_name = 'post_edit.html'
+    fields = ['title', 'body']

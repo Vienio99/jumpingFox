@@ -2,13 +2,15 @@
 
 
 {% block content %}
-<div class="post-entry">
-    <div class="additional-info">
-        <p>Author: {{ post.author }} Date: {{ post.pub_date|date:"SHORT_DATE_FORMAT" }}</p>
+    <div class="post-entry">
+        <div class="additional-info">
+            <p>Author: {{ post.author }}</p>
+            <p>Date: {{ post.pub_date|date:"SHORT_DATE_FORMAT" }} {{ post.pub_date|time:"h:i a" }}</p>
+        </div>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.body }}</p>
+        <a href="{% url 'post_edit' post.pk %}">Edit post</a>
     </div>
-    <h2>{{ post.title }}</h2>
-    <p>{{ post.body }}</p>
-</div>
-<br>
-<p class="return"><a href="{% url 'home' %}">Return</a></p>
+    <br>
+    <p class="return"><a href="{% url 'home' %}">Return</a></p>
 {% endblock content %}

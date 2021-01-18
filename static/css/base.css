@@ -19,6 +19,7 @@ header a:hover {
 
 .nav-left {
     margin-right: auto;
+    display: flex;
 }
 
 .nav-right {
@@ -29,14 +30,16 @@ header a:hover {
 
 
 img {
-    width:350px;
+    width:250px;
     height: auto;
+    display: inline-flex;
 }
 
 
 .post-entry {
     margin-bottom: 2rem;
 }
+
 
 .post-entry h2 {
     font-family: 'JetBrains Mono', monospace;
@@ -69,4 +72,20 @@ img {
 
 .post-entry .additional-info p {
     font-size: 15px;
+}
+
+.post-side {
+    font-family: 'Padauk', sans-serif;
+}
+
+.post-entry a[href] {
+    color:rgb(16, 167, 146);
+}
+
+.post-entry a[href]:hover {
+    text-decoration: none;
+}
+.post-side h1 {
+    font-family: 'JetBrains Mono', monospace;
+    margin: 0.5rem 0;
 }
