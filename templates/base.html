@@ -22,7 +22,14 @@
         <img src="{% static 'img/jumping-fox.jpg' %}", alt="Jumping fox">
       </div>
       <div class="nav-right">
-        <a href="{% url 'post_new' %}">New post</a>
+        {% if user.is_authenticated %}
+          <p>Hi {{ user.username }}!</p>
+          <p><a href="{% url 'post_new' %}">New post</a></p>
+          <p><a href="{% url 'logout' %}">Logout</a></p>
+        {% else %}
+          <p class="login"><a href="{% url 'login' %}">Log In</a></p>
+          <p class="login"><a href="{% url 'signup' %}">Sign up</a></p>
+        {% endif %}
       </div>
     </header>
     <div>
@@ -30,5 +37,10 @@
     {% endblock %}
     </div>
   </div>
+
+  <footer>
+    <p>Author: Krystian Garwol<br>
+    <a href="mailto:krystian.garwol11@gmail.com">krystian.garwol11@gmail.com</a></p>
+  </footer>
 </body>
 </html>

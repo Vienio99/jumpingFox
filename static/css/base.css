@@ -1,6 +1,7 @@
 body {
     font-family: 'Padauk', sans-serif;
     font-size: 17px;
+    text-align: center;
 }
 
 header {
@@ -23,11 +24,19 @@ header a:hover {
 }
 
 .nav-right {
-    display: flex;
-    padding-top: 2rem;
+    display: block;
     font-size: 20px;
+    margin: 0px;
+    padding-top: 20px;
 }
 
+.nav-right p {
+    margin: 0px;
+}
+
+.nav-right .login {
+    padding-right: 10px;
+}
 
 img {
     width:250px;
@@ -78,6 +87,11 @@ img {
     font-family: 'Padauk', sans-serif;
 }
 
+.post-side h1 {
+    font-family: 'JetBrains Mono', monospace;
+    margin: 0.5rem 0;
+}
+
 .post-entry a[href] {
     color:rgb(16, 167, 146);
 }
@@ -85,7 +99,17 @@ img {
 .post-entry a[href]:hover {
     text-decoration: none;
 }
-.post-side h1 {
+
+.post-side input {
+    font-family: 'Padauk', sans-serif;
+}
+
+footer {
+    border-top: 1px solid rgb(177, 177, 177);
     font-family: 'JetBrains Mono', monospace;
-    margin: 0.5rem 0;
+    font-size: 15px;
+}
+
+.signup {
+    text-align: initial;
 }
