@@ -1,46 +1,51 @@
 <!doctype html>
 {% load static %}
+
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="My blog app">
-  <meta name="author" content="krystian">
+  <head>
+    <meta charset="utf-8">
 
+    <title>{% block title %}Jumping fox blog{% endblock title %}</title>
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
 
-  <title>Jumping fox blog</title>
-  <link href="{% static 'css/base.css' %}" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Padauk&display=swap" rel="stylesheet">
+  </head>
 
-</head>
+  <body>
 
-<body>
-  <div>
     <header>
-      <div class="nav-left">
+      <nav class="nav-left">
         <h1><a href="{% url 'home' %}">Jumping fox blog</a></h1><br>
         <img src="{% static 'img/jumping-fox.jpg' %}", alt="Jumping fox">
-      </div>
-      <div class="nav-right">
+      </nav>
+      <nav class="nav-right">
         {% if user.is_authenticated %}
-          <p>Hi {{ user.username }}!</p>
-          <p><a href="{% url 'post_new' %}">New post</a></p>
-          <p><a href="{% url 'logout' %}">Logout</a></p>
+          <div class="logged-in">
+            <p>Hi {{ user.username }}!</p>
+            <p><a href="{% url 'post_new' %}">New post</a></p>
+            <p><a href="{% url 'logout' %}">Logout</a></p>
+          </div>
         {% else %}
-          <p class="login"><a href="{% url 'login' %}">Log In</a></p>
-          <p class="login"><a href="{% url 'signup' %}">Sign up</a></p>
+          <div class="logged-out">
+            <p><a href="{% url 'login' %}">Log In</a></p>
+            <p><a href="{% url 'signup' %}">Sign up</a></p>
+          </div>
         {% endif %}
-      </div>
+      </nav>
     </header>
-    <div>
-    {% block content %}
-    {% endblock %}
-    </div>
-  </div>
+
+
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
 
   <footer>
     <p>Author: Krystian Garwol<br>
     <a href="mailto:krystian.garwol11@gmail.com">krystian.garwol11@gmail.com</a></p>
   </footer>
-</body>
+
+
+  </body>
 </html>

@@ -11,8 +11,8 @@
         <p>{{ post.body }}</p>
         {% if user.is_authenticated %}
             {% if user.id == post.author_id %}
-            <p><a href="{% url 'post_edit' post.pk %}">Edit post</a></p>
-            <p><a href="{% url 'post_delete' post.pk %}">Delete post</a></p>
+            <p class="post-edit"><a href="{% url 'post_edit' post.pk %}">Edit post</a></p>
+            <p class="post-edit"><a href="{% url 'post_delete' post.pk %}">Delete post</a></p>
             {% endif %}
         {% endif %}
     </div>

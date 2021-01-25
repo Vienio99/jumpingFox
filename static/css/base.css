@@ -1,22 +1,33 @@
-body {
-    font-family: 'Padauk', sans-serif;
-    font-size: 17px;
-    text-align: center;
+html {
+    margin-left: 120px;
+    margin-right: 120px;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+}
+
+
+
 header {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     border-bottom: 1px solid rgb(177, 177, 177);
     display: flex;
+    text-align: center;
 }
 
 header a {
     color: rgb(202, 102, 9);
+    text-decoration: none;
 }
 
 header a:hover {
+    color: rgb(204, 122, 44);
     text-decoration: none;
 }
+
+
 
 .nav-left {
     margin-right: auto;
@@ -27,16 +38,12 @@ header a:hover {
     display: block;
     font-size: 20px;
     margin: 0px;
-    padding-top: 20px;
 }
 
-.nav-right p {
-    margin: 0px;
+.nav-right .logged-in {
+    margin: -8px;
 }
 
-.nav-right .login {
-    padding-right: 10px;
-}
 
 img {
     width:250px;
@@ -45,51 +52,38 @@ img {
 }
 
 
+main {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+main h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+
 .post-entry {
     margin-bottom: 2rem;
 }
 
+.post-entry p {
+    font-size: 19px;
+    margin: 0;
+    padding-top: 0px;
+}
 
 .post-entry h2 {
-    font-family: 'JetBrains Mono', monospace;
     margin: 0.5rem 0;
 }
 
 .post-entry h2 a {
     color:rgb(16, 167, 146);
+    text-decoration: none;
 }
 
 .post-entry h2 a:hover {
-    text-decoration: none;
-}
-
-.post-entry p {
-    font-size: 24px;
-    margin: 0;
-    padding-top: 0px;
-}
-
-.return a {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 20px;
-    color: rgb(202, 102, 9);
-}
-
-.return a:hover {
-    text-decoration: none;
-}
-
-.post-entry .additional-info p {
-    font-size: 15px;
-}
-
-.post-side {
-    font-family: 'Padauk', sans-serif;
-}
-
-.post-side h1 {
-    font-family: 'JetBrains Mono', monospace;
-    margin: 0.5rem 0;
+    color:rgb(83, 172, 160);
 }
 
 .post-entry a[href] {
@@ -97,17 +91,41 @@ img {
 }
 
 .post-entry a[href]:hover {
+    color:rgb(83, 172, 160);
+}
+
+.post-entry .additional-info p {
+    font-size: 15px;
+}
+
+.return a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: rgb(202, 102, 9);
     text-decoration: none;
 }
 
-.post-side input {
-    font-family: 'Padauk', sans-serif;
+.return a:hover {
+    color: rgb(204, 122, 44);
+    text-decoration: none;
 }
+
+
+
+
+.post-side h1 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0.5rem 0;
+}
+
+
+
 
 footer {
     border-top: 1px solid rgb(177, 177, 177);
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
+    text-align: center;
 }
 
 .signup {
