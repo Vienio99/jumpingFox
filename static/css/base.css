@@ -1,6 +1,6 @@
 html {
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 body {
@@ -15,6 +15,7 @@ header {
     border-bottom: 1px solid rgb(177, 177, 177);
     display: flex;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 header a {
@@ -98,19 +99,9 @@ main h2 {
     font-size: 15px;
 }
 
-.return a {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    color: rgb(202, 102, 9);
-    text-decoration: none;
+.return {
+    margin-bottom: 10px;
 }
-
-.return a:hover {
-    color: rgb(204, 122, 44);
-    text-decoration: none;
-}
-
-
 
 
 .post-side h1 {
@@ -118,7 +109,15 @@ main h2 {
     margin: 0.5rem 0;
 }
 
+.post-side a[href] {
+    color: rgb(202, 102, 9);
+    text-decoration: none;
+}
 
+.post-side a[href]:hover {
+    color: rgb(204, 122, 44);
+    text-decoration: none;
+}
 
 
 footer {
@@ -130,4 +129,8 @@ footer {
 
 .signup {
     text-align: initial;
+}
+
+.search {
+    display: flex;
 }
