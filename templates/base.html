@@ -13,7 +13,6 @@
   </head>
 
   <body>
-    
     <header>
       <nav class="nav-left">
         <h1><a href="{% url 'home' %}">Jumping fox blog</a></h1><br>
@@ -37,14 +36,18 @@
 
 
     <main>
+      <nav class="nav-main">
+        <p><a href="{% url 'home' %}">Home</a></p>
+        <p><a href="{% url 'about' %}">About</a></p>
+      </nav>
       {% block content %}
       {% endblock %}
     </main>
 
-  <footer>
-    <p>Author: Krystian Garwol<br>
-    <a href="mailto:krystian.garwol11@gmail.com">krystian.garwol11@gmail.com</a></p>
-  </footer>
+    <footer>
+      <p>Author: Krystian Garwol<br>
+      <a href="mailto:krystian.garwol11@gmail.com">krystian.garwol11@gmail.com</a></p>
+    </footer>
 
 
   </body>

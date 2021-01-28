@@ -54,4 +54,6 @@ class SearchResultsView(generic.ListView):
         )
         return posts
 
+class AboutView(generic.TemplateView):
+    template_name = 'about.html'
 

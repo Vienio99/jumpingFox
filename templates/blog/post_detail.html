@@ -7,14 +7,16 @@
             <p>Author: {{ post.author }}</p>
             <p>Date: {{ post.pub_date|date:"SHORT_DATE_FORMAT" }} {{ post.pub_date|time:"h:i a" }}</p>
         </div>
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.body }}</p>
+        <div class="post-edit">
         {% if user.is_authenticated %}
             {% if user.id == post.author_id %}
-            <p class="post-edit"><a href="{% url 'post_edit' post.pk %}">Edit post</a></p>
-            <p class="post-edit"><a href="{% url 'post_delete' post.pk %}">Delete post</a></p>
+            <p><a href="{% url 'post_edit' post.pk %}">Edit post</a></p>
+            <p><a href="{% url 'post_delete' post.pk %}">Delete post</a></p>
             {% endif %}
         {% endif %}
+        </div>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.body }}</p>
     </div>
     <br>
     <form class="return">
